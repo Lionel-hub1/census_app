@@ -7,12 +7,12 @@
     <title>Census Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <nav class="flex items-center justify-between bg-gray-800 p-4">
+  <body class="bg-gray-800">
+    <nav class="flex items-center px-10 py-4">
       <div class="flex items-center">
         <!-- Brand -->
         <svg
-          class="w-6 h-6 text-gray-800 dark:text-white"
+          class="w-6 h-6 text-white"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
@@ -28,17 +28,39 @@
         <span class="text-white font-semibold text-lg">Census Records</span>
       </div>
     </nav>
-    <div class="container mx-auto">
+    <div class="px-10 py-10 text-white">
       <table class="table-auto w-full">
         <thead>
           <div class="flex justify-between">
-            <div class="px-4 py-2">
-              <input type="text" placeholder="Search people here..." />
-              <button type="submit">Search</button>
+            <div class="relative">
+              <input
+                class="px-2 py-1 rounded"
+                type="text"
+                placeholder="Search people here..."
+              />
+              <button class="absolute right-0 my-1" type="submit">
+                <svg
+                  class="w-6 h-6 text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                    d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </button>
             </div>
-            <div class="px-4 py-2">
-              <button type="submit">Add New Person</button>
-            </div>
+            <a
+              class="px-4 py-1 border-2 border-white flex items-center justify-center"
+              href="{% url 'add' %}"
+            >
+              Add New Person
+            </a>
           </div>
           <tr>
             <th class="px-4 py-2">First Name</th>
@@ -60,47 +82,6 @@
           {% endfor %}
         </tbody>
       </table>
-
-      <div class="fixed inset-0 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-lg p-8">
-          <h2 class="text-2xl font-bold mb-4">Add New Person</h2>
-          <form>
-            <div class="mb-4">
-              <label for="name" class="block mb-2">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="border rounded px-4 py-2 w-full"
-              />
-            </div>
-            <div class="mb-4">
-              <label for="age" class="block mb-2">Age</label>
-              <input
-                type="number"
-                id="age"
-                name="age"
-                class="border rounded px-4 py-2 w-full"
-              />
-            </div>
-            <div class="mb-4">
-              <label for="address" class="block mb-2">Address</label>
-              <input
-                type="text"
-                id="address"
-                name="address"
-                class="border rounded px-4 py-2 w-full"
-              />
-            </div>
-            <button
-              type="submit"
-              class="bg-blue-500 text-white px-4 py-2 rounded"
-            >
-              Save
-            </button>
-          </form>
-        </div>
-      </div>
     </div>
   </body>
 </html>

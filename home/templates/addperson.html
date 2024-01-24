@@ -36,8 +36,8 @@
         </a>
       </div>
     </nav>
-    <div class="max-w-lg mx-auto">
-      <form action="{% url 'add' %}" method="POST">
+    <div >
+      <form class="max-w-lg bg-white mx-auto px-5 py-4 mt-4 rounded-lg shadow-lg" action="{% url 'add' %}" method="POST">
         {% csrf_token %}
         <div class="mb-4">
           <label for="first_name" class="block text-gray-700 font-bold mb-2">

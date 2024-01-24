@@ -7,8 +7,8 @@
     <title>Census Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-gray-800">
-    <nav class="flex items-center px-10 py-4">
+  <body class="bg-gray-300">
+    <nav class="flex items-center px-10 py-4 bg-gray-800">
       <div class="flex items-center">
         <!-- Brand -->
         <svg
@@ -28,17 +28,19 @@
         <span class="text-white font-semibold text-lg">Census Records</span>
       </div>
     </nav>
-    <div class="px-10 py-10 text-white">
-      <table class="table-auto w-full">
-        <thead>
-          <div class="flex justify-between">
+    <div class="px-10 py-10">
+      <table class="table-fixed w-full border border-gray-800">
+        <thead class="text-white bg-gray-800">
+          <div
+            class="flex justify-between items-center px-10 bg-gray-800 py-3 rounded-t-lg"
+          >
             <div class="relative">
               <input
-                class="px-2 py-1 rounded"
+                class="px-2 py-1 rounded-lg"
                 type="text"
                 placeholder="Search people here..."
               />
-              <button class="absolute right-0 my-1" type="submit">
+              <button class="absolute right-1 my-1" type="submit">
                 <svg
                   class="w-6 h-6 text-gray-800"
                   aria-hidden="true"
@@ -56,9 +58,20 @@
               </button>
             </div>
             <a
-              class="px-4 py-1 border-2 border-white flex items-center justify-center"
+              class="hover:bg-gray-700 rounded-lg px-4 py-1 border-2 border-white flex items-center justify-center text-white"
               href="{% url 'add' %}"
             >
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="mr-2"
+                aria-hidden="true"
+              >
+                <path
+                  d="M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3H6a1 1 0 1 1 0-2h3V6a1 1 0 0 1 1-1Z"
+                />
+              </svg>
               Add New Person
             </a>
           </div>
@@ -70,7 +83,7 @@
             <th class="px-4 py-2">Address</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="text-gray-800">
           {% for person in records %}
           <tr>
             <td class="border px-4 py-2">{{ person.first_name }}</td>

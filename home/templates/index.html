@@ -36,9 +36,9 @@
           >
             <div class="relative">
               <input
-                class="px-2 py-1 rounded-lg"
+                class="px-2 py-1 rounded-md"
                 type="text"
-                placeholder="Search people here..."
+                placeholder="Search people here... "
               />
               <button class="absolute right-1 my-1" type="submit">
                 <svg
@@ -86,8 +86,8 @@
         <tbody class="text-gray-800">
           {% for person in records %}
           <tr>
-            <td class="border px-4 py-2">{{ person.first_name }}</td>
-            <td class="border px-4 py-2">{{ person.last_name }}</td>
+            <td class="border px-4 py-2 font-bold">{{ person.first_name }}</td>
+            <td class="border px-4 py-2 font-bold">{{ person.last_name }}</td>
             <td class="border px-4 py-2">{{ person.age }}</td>
             <td class="border px-4 py-2">{{ person.occupation }}</td>
             <td class="border px-4 py-2">{{ person.location }}</td>

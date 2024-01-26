@@ -1,10 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
 
 # Create your views here.
+
+
 def home(request):
     context = {
-        "records" : Person.objects.all()
+        "records": Person.objects.all()
     }
     return render(request, 'index.html', context)
 
@@ -18,5 +20,6 @@ def add(request):
         person.occupation = request.POST["occupation"]
         person.location = request.POST["location"]
         person.save()
+        return redirect('/')
 
     return render(request, 'addperson.html')

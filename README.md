@@ -56,9 +56,18 @@ The `Census Web App` is a Django-based web application that allows users to add 
 Contributions are welcome! If you'd like to contribute to the `census_app` project, please follow these steps:
 
 1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/your-feature-name`
-3. Make your changes and commit them: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin feature/your-feature-name`
+2. Create a new branch: 
+    ```bash
+    git checkout -b feature/your-feature-name
+    ```
+3. Make your changes and commit them: 
+    ```bash
+    git commit -m 'Add some feature'
+    ```
+4. Push to the branch: 
+    ```bash
+    git push origin feature/your-feature-name
+    ```
 5. Submit a pull request.
 
 ## License

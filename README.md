@@ -14,11 +14,35 @@ The `Census Web App` is a Django-based web application that allows users to add 
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/Lionel-hub1/census_app.git`
-2. Navigate to the project directory: `cd census_app`
-3. Install the required dependencies: `pip install -r requirements.txt`
-4. Set up the database: `python manage.py migrate`
-5. Start the development server: `python manage.py runserver`
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/Lionel-hub1/census_app.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd census_app
+    ```
+
+3. Install the required dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Set up the database:
+
+    ```bash
+    python manage.py migrate
+    ```
+
+5. Start the development server:
+
+    ```bash
+    python manage.py runserver
+    ```
 
 ## Usage
 
